@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upload Content | Pratigya Abhiyaan</title>
+<title>Volunteer Profile | Pratigya Abhiyaan</title>
 <style>
 body {
     margin: 0;
@@ -16,6 +16,7 @@ body {
 }
 
 
+
 .sidebar {
     width:230px; height:100vh; position:fixed; top:0; left:0;
     background:rgba(0,0,0,0.6); padding-top:20px; backdrop-filter:blur(6px);
@@ -25,17 +26,14 @@ body {
 .sidebar a:hover, .active { background:rgba(236,182,19,0.25); color:#ecb613; }
 
 .content { margin-left:250px; padding:30px; }
-
 .card {
     width:50%; background:rgba(255,255,255,0.08); padding:20px;
-    border-radius:12px; backdrop-filter:blur(6px); margin-bottom:20px;
+    border-radius:12px; backdrop-filter:blur(6px);
+    margin-bottom:20px;
 }
 .card h3 { color:#ecb613; }
-
-input[type="file"] {
-    display:block; margin:10px 0; width:100%;
-}
-
+input { width:100%; padding:10px; margin:8px 0; border:none;
+    border-radius:8px; background:rgba(255,255,255,0.15); color:white; }
 button {
     width:100%; padding:12px; border:none; border-radius:8px;
     background:#ecb613; color:black; font-weight:bold; cursor:pointer;
@@ -46,22 +44,24 @@ button {
 
 <div class="sidebar">
     <h2>📚 Volunteer Panel</h2>
-    <a href="volunteer_dashboard.html">🏠 Dashboard</a>
-    <a href="manage_students.html">👥 Manage Students</a>
-    <a class="active" href="upload_content.html">📝 Upload Content</a>
-    <a href="vprofile.html">👤 Profile</a>
-    <a href="logout.html">🚪 Logout</a>
+    <a href="volunteer_dashboard.html">Dashboard</a>
+    <a href="manage_students.html">Manage Students</a>
+    <a href="upload_content.html">Upload Content</a>
+    <a class="active" href="vprofile.html">Profile</a>
+    <a href="logout.html">Logout</a>
 </div>
 
 <div class="content">
-    <h2 style="color:#ecb613;">📝 Upload Content</h2>
+    <h2 style="color:#ecb613;">Volunteer Profile</h2>
 
     <div class="card">
-        <h3>Upload Lecture Materials</h3>
-        <p>Upload PPTs, PDFs, or Videos for students.</p>
+        <h3>Personal Details</h3>
+        <input type="text" placeholder="Full Name" value="John Doe">
+        <input type="email" placeholder="Email" value="john@example.com">
+        <input type="number" placeholder="Phone Number" value="9876543210">
+        <input type="text" placeholder="Address" value="Chandigarh, India">
 
-        <input type="file" multiple>
-        <button>Upload Content</button>
+        <button>Update Profile</button>
     </div>
 </div>
 
