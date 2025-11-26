@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assignments | Pratigya Abhiyaan</title>
+<title>Upload Assignment | Pratigya Abhiyaan</title>
 
 <style>
     body {
@@ -19,11 +19,21 @@
     .sidebar a:hover, .active { background: rgba(236,182,19,.25); color: #ecb613; border-left: 3px solid #ecb613; }
 
     .content { margin-left: 240px; padding: 30px; }
-    .assignment {
-        background: rgba(255,255,255,0.08); padding: 20px;
-        border-radius: 12px; margin-bottom: 20px; backdrop-filter: blur(6px);
+    .box {
+        background: rgba(255,255,255,0.08); padding: 25px;
+        border-radius: 12px; backdrop-filter: blur(6px);
+        width: 60%; margin-top: 20px;
     }
     h3 { color: #ecb613; }
+    input, select {
+        width: 100%; padding: 10px; margin: 10px 0;
+        border-radius: 6px; border: none;
+    }
+    button {
+        width: 100%; padding: 12px; background: #ecb613;
+        border: none; color: black; font-weight: bold;
+        border-radius: 8px; cursor: pointer; font-size: 15px;
+    }
 </style>
 
 </head>
@@ -33,25 +43,31 @@
     <h2>📚 Student Panel</h2>
     <a href="dashboard.html">🏠 Dashboard</a>
     <a href="courses.html">📖 Courses / Modules</a>
-    <a class="active" href="assignments.html">📝 Assignments</a>
-   
+    <a href="assignments.html">📝 Assignments</a>
+    <a class="active" href="upload_assignments.html">📤 Upload Assignment</a>
+     <a  href="view_grades.html">📊 View Grades</a>
     <a href="profile.html">👤 Profile</a>
     <a href="logout.html">🚪 Logout</a>
 </div>
 
 <div class="content">
-    <h2>📝 Assignments</h2>
+    <h2>📤 Upload Your Assignment</h2>
 
-    <div class="assignment">
-        <h3>English Project</h3>
-        <p>Write a short story. Deadline: Sunday</p>
+    <div class="box">
+        <h3>Submit Assignment</h3>
+
+        <label>Select Assignment:</label>
+        <select>
+            <option>English Project</option>
+            <option>Math Worksheet</option>
+            <option>Science Report</option>
+        </select>
+
+        <label>Upload File:</label>
+        <input type="file">
+
+        <button>Submit Assignment</button>
     </div>
-
-    <div class="assignment">
-        <h3>Math Worksheet</h3>
-        <p>Chapters 3 & 4. Deadline: Tuesday</p>
-    </div>
-
 </div>
 
 </body>
