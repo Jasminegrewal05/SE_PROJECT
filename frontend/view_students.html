@@ -10,8 +10,8 @@ body {
     font-family: Arial;
     background: url('https://images.unsplash.com/photo-1711062717294-8902df8cebe3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2tib2FyZHxlbnwwfHwwfHx8MA%3D%3D') no-repeat bottom center;
     background-size: cover;
-    min-height: 100%;   /* ensures body grows as content grows */
-    background-attachment: fixed; /* keeps the background fixed when scrolling */
+    min-height: 100%;   
+    background-attachment: fixed; 
     color: white;
 }
 
@@ -33,11 +33,11 @@ button.remove-btn { padding:6px 10px; border:none; border-radius:8px; background
 
 <div class="sidebar">
     <h2>📚 Volunteer Panel</h2>
-    <a href="volunteer_dashboard.html">🏠 Dashboard</a>
-    <a href="manage_students.html" class="active">👥 Manage Students</a>
-    <a href="upload_content.html">📝 Upload Content</a>
-    <a href="vprofile.html">👤 Profile</a>
-    <a href="#" onclick="confirmLogout()">🚪 Logout</a>
+    <a href="volunteer_dashboard.html">Dashboard</a>
+    <a href="manage_students.html" class="active">Manage Students</a>
+    <a href="upload_content.html">Upload Content</a>
+    <a href="vprofile.html">Profile</a>
+    <a href="#" onclick="confirmLogout()">Logout</a>
 </div>
 
 <div class="content">
@@ -73,7 +73,7 @@ button.remove-btn { padding:6px 10px; border:none; border-radius:8px; background
 <script>
 function removeStudent(name) {
     if(confirm(`Are you sure you want to remove ${name}?`)) {
-        alert(`✅ ${name} removed successfully!`);
+        alert(`${name} removed successfully!`);
     }
 }
 
