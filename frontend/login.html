@@ -127,10 +127,45 @@
 <footer>© 2024 Pratigya Abhiyaan. All rights reserved.</footer>
 
 <script>
-function redirect() {
+async function redirect() {
   const rolePage = document.getElementById("role").value;
-  window.location.href = rolePage;
+  const username = document.querySelector('input[type="text"]').value;
+  const password = document.querySelector('input[type="password"]').value;
+
+  if (!username || !password) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  try {
+    const res = await fetch("http://localhost:4000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username,
+        password,
+        rolePage
+      })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.message);
+      return;
+    }
+
+    // Save user session (optional)
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    // Redirect to correct dashboard
+    window.location.href = data.redirect;
+
+  } catch (err) {
+    alert("Server error. Is backend running?");
+  }
 }
 </script>
+
 </body>
 </html>
