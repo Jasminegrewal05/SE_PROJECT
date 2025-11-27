@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assignments | Pratigya Abhiyaan</title>
+<title>Your Grades | Pratigya Abhiyaan</title>
 
 <style>
     body {
@@ -19,11 +19,13 @@
     .sidebar a:hover, .active { background: rgba(236,182,19,.25); color: #ecb613; border-left: 3px solid #ecb613; }
 
     .content { margin-left: 240px; padding: 30px; }
-    .assignment {
-        background: rgba(255,255,255,0.08); padding: 20px;
-        border-radius: 12px; margin-bottom: 20px; backdrop-filter: blur(6px);
+    .grade-card {
+        background: rgba(255,255,255,0.08); padding: 25px;
+        border-radius: 12px; margin-bottom: 25px; backdrop-filter: blur(6px);
     }
-    h3 { color: #ecb613; }
+    h3 { color: #ecb613; margin-bottom: 10px; }
+    .score { font-size: 18px; color: #ecb613; }
+    .feedback { color: #ddd; font-style: italic; }
 </style>
 
 </head>
@@ -31,6 +33,7 @@
 
 <div class="sidebar">
     <h2>📚 Student Panel</h2>
+<<<<<<<< HEAD:frontend/assignments.html
     <a href="dashboard.html">Dashboard</a>
     <a href="courses.html">Courses / Modules</a>
     <a class="active" href="assignments.html">Assignments</a>
@@ -41,15 +44,30 @@
 
 <div class="content">
     <h2>Assignments</h2>
+========
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="courses.html">📖 Courses / Modules</a>
+    <a href="assignments.html">📝 Assignments</a>
+    <a href="upload_assignments.html">📤 Upload Assignment</a>
+    <a class="active" href="view_grades.html">📊 View Grades</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="logout.html">🚪 Logout</a>
+</div>
 
-    <div class="assignment">
+<div class="content">
+    <h2>📊 Your Grades</h2>
+>>>>>>>> main:view_grades.html
+
+    <div class="grade-card">
         <h3>English Project</h3>
-        <p>Write a short story. Deadline: Sunday</p>
+        <p class="score">Marks: <b>85 / 100</b></p>
+        <p class="feedback">Feedback: Well-written story, great creativity!</p>
     </div>
 
-    <div class="assignment">
+    <div class="grade-card">
         <h3>Math Worksheet</h3>
-        <p>Chapters 3 & 4. Deadline: Tuesday</p>
+        <p class="score">Marks: <b>92 / 100</b></p>
+        <p class="feedback">Feedback: Excellent problem-solving.</p>
     </div>
 
 </div>
